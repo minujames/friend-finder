@@ -9,11 +9,10 @@ module.exports = function(app){
 
   app.post("/api/friends", function(req, res){
     var newFriend = req.body;
-    console.log("friend", friend);
 
     var compatibleFriends = findFriends(newFriend);
 
-    friendsData.push(friend);
+    friendsData.push(newFriend);
     res.json(compatibleFriends);
   });
 }
@@ -24,7 +23,6 @@ function findFriends(newFriend){
 
   friendsData.forEach(function(friend){
     var currFriendScore = getCompatibilityScore(friend, newFriend);
-    console.log(friend.name, currFriendScore);
 
     if(currFriendScore === prevFriendScore){
       compatibleFriends.push(friend);
