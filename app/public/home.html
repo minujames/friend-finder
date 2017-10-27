@@ -4,23 +4,45 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FriendFinder</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Acme|Source+Sans+Pro" rel="stylesheet">
+
+  <style type="text/css">
+  .header{
+    background-color: #AED6F1;
+  }
+  h1{
+    font-family: 'Acme', sans-serif;
+  }
+  body{
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  footer{
+    font-size: 16px;
+  }
+</style>
 </head>
 
 <body>
   <div class="container">
-    <div class="jumbotron">
+    <div class="jumbotron header">
       <h1>Friend Finder</h1>
       <hr>
       <h2 class="">Answer a few basic questions. </h2>
       <h2 class="">Then find the friend with the greatest compatibility!</h2>
       <br>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Survey</a></p>
+      <p><a class="btn btn-primary btn-lg" href="/survey" role="button">Go to Survey</a></p>
     </div>
-
-
   </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <a href="/api/friends">API Friends List</a> | 
+        <a href="https://github.com/minujames/friend-finder">GitHub Repo</a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
