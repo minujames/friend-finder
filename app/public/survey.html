@@ -15,8 +15,6 @@
   }
   body{
     font-family: 'Source Sans Pro', sans-serif;
-    /*font-size: 17px;*/
-
   }
   p.question{
     font-size: 20px;
@@ -247,17 +245,16 @@
             data.forEach(function(match){
               var div = $("<div>");
               var name = $("<h2>").text(match.name);
-              var img = $("<img>").attr("src", match.photo).css({"width": "150px", "height": "150px"});
+              var img = $("<img>").attr({"src": match.photo,"alt": "photo"})
+              .css({"width": "150px", "height": "150px"});
               div.append(name, img);
               $(".modal-body").append(div);
             });
             $("#friendsModal").modal('toggle');
-
-          // window.location.reload();
-        });
+          });
         }
         else{
-          alert("Please fill all the fields");
+          alert("Please fill out all fields before submitting!");
         }
       });
 
